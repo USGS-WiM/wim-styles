@@ -2,11 +2,50 @@
 
 Styling for WiM applications
 
-###**/core** : core styling, based on WiM Styleguide
+###**/core** :  core styling, based on WiM Styleguide
 
-###**/template**: styling for generator-wim generated mapping apps
+###**/template**:  styling for generator-wim generated mapping apps
 
 ##Core WiM styles
+
+### Adding as managed bower package to a project
+
+##### Step 1.
+Add wim-styles to the dependencies list in the project's bower.json:
+```
+"dependencies": {
+	  "wim-styles": "USGS-WiM/wim-styles"
+  }
+```
+
+#####Step 2.
+Tell bower to get the package from github and place it in your bower_components folder
+```bash
+bower install
+```
+This will install all packages in your bower.json dependencies list. Alternatively you can specify
+```bash
+bower install wim-styles
+```
+to install only that package
+
+#####Step 3.
+Add the stylesheet reference to the index.html:
+```html
+ <link rel="stylesheet" href="bower_components/wim-styles/core/css/wim.css">
+```
+
+#####Step 4(optional).
+Specify version in your dependencies list.  Version is important for ensuring the app does not break. Below will specify v0.0.12:
+
+```
+"dependencies": {
+	  "wim-mapper-styles": "USGS-WiM/wim-styles#0.0.12"
+  }
+```
+
+If no version is specified, bower will retrieve the latest release (which may not be the latest commit).
+
 
 ###Updating core styles
 
@@ -14,7 +53,7 @@ Styling for WiM applications
 
 After making style changes to the less files, less must be compiled, and version must be bumped up.
 
-### To compile base.css
+### To compile wim.css
 
 #### Install required software
 ```
