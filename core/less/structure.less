@@ -1,0 +1,172 @@
+//out: ../css/structure.css, sourcemap: false, compress: true
+
+@import "variables.less";
+// structure.less
+
+hr{
+    margin: 30px 0;
+    display: block;
+}
+
+//
+// Lists
+//
+#listdisplay(){
+    padding: 3px 0;
+    margin: 0 auto;
+    font-size: 12pt;
+    color: @black;
+    font-weight: 400;
+    font-size: 11pt;
+}
+ul{
+    padding: 0 0 0 18px;
+    li{
+        #listdisplay();
+    }
+}
+ol{
+    padding: 0 0 0 18px;
+    li{
+        #listdisplay();
+    }
+}
+.wim-list-header{
+    border-bottom: 1px solid fade(@black, 50%);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin: 0 0 10px 0;
+    padding: 15px 0 10px 0;
+    font-size: 10pt;
+}
+
+
+//
+// Alerts
+//
+// Normal Alerts
+#normalAlert(){
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    margin: 10px 0;
+    font-size: 9pt;
+    letter-spacing: 0.8px;
+    border: 1px solid @greyd;
+    color: @white;
+    border-radius: 3px;
+    font-weight: 400;
+    .ion-close-round{
+        float: right;
+        margin: 0 0 0 10px;
+        color: fade(@white, 50%);
+        transition: @transition;
+        &:hover{
+            color: fade(@white, 90%);
+            transition: @transition;
+            cursor: pointer;
+        }
+    }
+}
+
+.wim-alert{
+    #normalAlert();
+    background-color: @grey;
+    color: @black;
+    .ion-close-round{
+        color: fade(@black, 50%);
+        &:hover{
+            color: fade(@black, 90%);
+        }
+    }
+}
+.wim-alert-primary{
+    #normalAlert();
+    background-color: @blue;
+}
+.wim-alert-success{
+    #normalAlert();
+    background-color: @green;
+}
+.wim-alert-info{
+    #normalAlert();
+    background-color: @lightblued;
+}
+.wim-alert-warning{
+    #normalAlert();
+    background-color: @yellow;
+}
+.wim-alert-danger{
+    #normalAlert();
+    background-color: @red;
+}
+
+// Fixed Alerts
+#fixedAlert(){
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 5000;
+    width: 280px;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    margin: 10px 0;
+    font-size: 9pt;
+    letter-spacing: 0.8px;
+    border: 1px solid fade(@black, 50%);
+    color: @white;
+    border-radius: 3px;
+    font-weight: 400;
+    b{
+        display: block;
+        font-size: 12pt;
+        letter-spacing: 1px;
+    }
+    .ion-close-round{
+        float: right;
+        position: absolute;
+        margin-left: 240px;
+        margin-top: -7px;
+        color: fade(@white, 50%);
+        transition: @transition;
+        &:hover{
+            color: fade(@white, 90%);
+            transition: @transition;
+            cursor: pointer;
+        }
+    }
+}
+.wim-alert-fixed{
+    #fixedAlert();
+    background-color: @grey;
+    color: @black;
+    .ion-close-round{
+        color: fade(@black, 50%);
+        &:hover{
+            color: fade(@black, 90%);
+        }
+    }
+}
+.wim-alert-fixed-primary{
+    #fixedAlert();
+    background-color: @blue;
+}
+.wim-alert-fixed-success{
+    #fixedAlert();
+    background-color: @green;
+}
+.wim-alert-fixed-info{
+    #fixedAlert();
+    background-color: @lightblued;
+}
+.wim-alert-fixed-warning{
+    #fixedAlert();
+    background-color: @yellow;
+}
+.wim-alert-fixed-danger{
+    #fixedAlert();
+    background-color: @red;
+}
