@@ -49,10 +49,16 @@ gulp.task('push', function () {
 });
 
 //less compilation
-gulp.task('less', function () {
-    return gulp.src(['less/base.less'])
+gulp.task('less-template', function () {
+    return gulp.src(['template/less/base.less'])
         .pipe(less())
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('template/css'))
+});
+
+gulp.task('less-core', function () {
+    return gulp.src(['core/less/base.less'])
+        .pipe(less())
+        .pipe(gulp.dest('core/css'))
 });
 
 // Clean
@@ -63,7 +69,7 @@ gulp.task('clean', function (cb) {
 });
 
 // build dist
-gulp.task('dist', ['less']);
+gulp.task('dist', ['less-template', 'less-core']);
 
 // Default task
 gulp.task('default', ['clean'], function () {
