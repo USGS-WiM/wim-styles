@@ -2,13 +2,38 @@
 
 Styling for WiM applications
 
-/core : core styling, based on WiM Styleguide
+###**/core** : core styling, based on WiM Styleguide
 
-/template: styling for generator-wim generated mapping apps
+###**/template**: styling for generator-wim generated mapping apps
 
 ##Core WiM styles
 
-Fill in instructions here.
+###Updating core styles
+
+####This is the workflow for updating the core styles, which would apply changes to all applications importing wim-styles via bower, per the version specified.
+
+After making style changes to the less files, less must be compiled, and version must be bumped up.
+
+### To compile base.css
+
+#### Install required software
+```
+npm install -g less
+```
+
+#### 1.  Get project dependencies
+```
+npm install
+```
+
+#### 2.  Compile CSS
+```
+cd core/less
+lessc wim.less ../css/wim.css
+```
+
+------
+
 
 ##Template styles
 
@@ -78,7 +103,7 @@ Other ways to specify version:
 
 ###Updating template styles
 
-####This is the workflow for updating the wim-mapper-styles repo itself, which would apply changes to all applications importing it via bower, per the version specified.
+####This is the workflow for updating the  template styles, which would apply changes to all applications importing wim-styles via bower, per the version specified.
 
 After making style changes to the less files, less must be compiled, and version must be bumped up.
 
@@ -96,7 +121,7 @@ npm install
 
 #### 2.  Compile CSS
 ```
-cd less
+cd template/less
 lessc base.less ../css/base.css
 ```
 
