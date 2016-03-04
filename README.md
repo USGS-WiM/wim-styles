@@ -3,6 +3,7 @@
 Styling for WiM applications
 
 /core : core styling, based on WiM Styleguide
+
 /template: styling for generator-wim generated mapping apps
 
 ##Core WiM styles
