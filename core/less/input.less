@@ -1,0 +1,491 @@
+//out: ../css/input.css, sourcemap: false, compress: true
+
+
+@import "variables.less";
+// input.less
+
+// Buttons
+#btn-wim(){
+    box-sizing: border-box;
+    padding: 8px 17px;
+    background-color: @white;
+    border-radius: 2px;
+    border: 2px solid fade(@black, 23%);
+    color: fade(@black, 80%);
+    letter-spacing: 0.75px;
+    font-family: @sans;
+    font-weight: 600;
+    display: inline-block;
+    font-size: 12pt;
+    transition: @transition;
+    margin: 5px 0;
+    &:hover{
+        cursor: pointer;
+        border: 2px solid fade(@black, 30%);
+        transition: @transition;
+        background-color: fade(@black, 5%);
+    }
+    &:visited{
+        color: @white;
+    }
+}
+
+
+.btn-wim,
+button{
+    #btn-wim();
+    &:disabled{
+        opacity: 0.65;
+        &:hover{
+            background-color: @white;
+            cursor: default;
+        }
+    }
+    &:focus{
+        border: 2px solid fade(@black, 60%);
+        -webkit-filter: brightness(115%);
+        filter: brightness(115%);
+    }
+    &:active{
+        border: 2px solid fade(@black, 50%);
+        -webkit-filter: brightness(85%);
+        filter: brightness(85%);
+    }
+}
+
+
+.btn-wim-primary{
+    #btn-wim();
+    background-color: @blue;
+    color: @white;
+    &:hover{
+        background-color: fade(@blued, 100%);
+    }
+    &:disabled{
+        &:hover{
+            background-color: fade(@blue, 100%);
+        }
+    }
+}
+
+.btn-wim-success{
+    #btn-wim();
+    background-color: @green;
+    color: @white;
+    &:hover{
+        background-color: fade(@greend, 100%);
+    }
+    &:disabled{
+        &:hover{
+            background-color: fade(@green, 100%);
+        }
+    }
+}
+
+.btn-wim-info{
+    #btn-wim();
+    background-color: @lightblue;
+    color: @white;
+    &:hover{
+        background-color: fade(@lightblued, 100%);
+    }
+    &:disabled{
+        &:hover{
+            background-color: fade(@lightblue, 100%);
+        }
+    }
+}
+
+.btn-wim-warning{
+    #btn-wim();
+    background-color: @yellow;
+    color: @white;
+    &:hover{
+        background-color: fade(@yellowd, 100%);
+    }
+    &:disabled{
+        &:hover{
+            background-color: fade(@yellow, 100%);
+        }
+    }
+}
+
+.btn-wim-danger{
+    #btn-wim();
+    background-color: @red;
+    color: @white;
+    &:hover{
+        background-color: fade(@redd, 100%);
+    }
+    &:disabled{
+        &:hover{
+            background-color: fade(@red, 100%);
+        }
+    }
+}
+
+
+// Button sizes
+.btn-wim-lg{
+    font-size: 16pt;
+    padding: 10px 19px;
+}
+.btn-wim-sm{
+    font-size: 10pt;
+    padding: 6px 14px;
+}
+.btn-wim-xs{
+    font-size: 9pt;
+    padding: 3px 8px;
+}
+
+// Additional Buttons
+.btn-wim-icon{
+    padding: 0 12px 0 0;
+    i{
+        box-sizing: border-box;
+        padding: 8px 15px;
+        display: inline-block;
+        background-color: fade(@black, 20%);
+        margin: 0 12px 0 0;
+        border-right: 1px solid fade(@black, 20%);
+    }
+}
+
+// Button Groups
+.btn-wim-group-1{
+    display: block;
+    width: 100%;
+}
+.btn-wim-group-2{
+    display: inline-block;
+    width: 48.5%;
+    margin: 0;
+    &:nth-child(1){
+        margin-right: 1.5%;
+    }
+    &:nth-child(2){
+        margin-left: 1.5%;
+    }
+}
+.btn-wim-group-3{
+    display: inline-block;
+    width: 31.33%;
+    margin: 0;
+    &:nth-child(2){
+        margin: 0 3%;
+    }
+}
+.btn-wim-group-4{
+    display: inline-block;
+    width: 23%;
+    margin: 0;
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4){
+        margin-left: 2.666%;
+    }
+}
+.btn-wim-group-5{
+    display: inline-block;
+    width: 18.5%;
+    margin: 0;
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5){
+        margin-left: 1.875%;
+    }
+}
+
+
+
+
+//
+// Inputs
+//
+label {
+    color: fade(@black, 75%);
+    font-weight: 400 !important;
+    font-family: @sans;
+}
+#placeholder(){
+    color: fade(@black, 30%);
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+:-moz-placeholder{#placeholder();}
+::-moz-placeholder{#placeholder();}
+::-webkit-input-placeholder{#placeholder();}
+:-ms-input-placeholder{#placeholder();}
+
+#inputBoxStyles(){
+    background-color: fade(@greyl, 50%);
+    border-radius: 2px;
+    border: 1px solid fade(@black, 20%);
+    box-sizing: border-box;
+    padding: 8px;
+    font-family: @sans;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+    display: inline-block;
+    &:focus{
+        border: 1px solid fade(@blue, 60%);
+        background-color: fade(@blue, 5%);
+    }
+    &:disabled{
+        opacity: 0.8;
+        color: fade(@black, 50%);
+    }
+}
+input{
+    #inputBoxStyles();
+    margin: 5px 0 !important;
+
+}
+textarea{
+    #inputBoxStyles();
+    vertical-align: middle;
+    margin: 5px 0 !important;
+}
+.input-wim-lg{
+    font-size: 16pt;
+}
+.input-wim-sm{
+    font-size: 9pt;
+    padding: 4px;
+}
+
+select{
+    background-color: fade(@greyl, 50%);
+    border: 1px solid fade(@black, 20%);
+    box-sizing: border-box;
+    padding: 8px 35px 8px 15px;
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    letter-spacing: 0.5px;
+    font-family: @sans;
+    transition: @transition;
+    color: @black !important;
+    font-weight: 500 !important;
+    &:hover{
+        border: 1px solid fade(@black, 50%);
+        cursor: pointer;
+        transition: @transition;
+        background-color: fade(@blue, 5%);
+    }
+    &:focus{
+        border: 1px solid fade(@black, 60%);
+    }
+    &:disabled{
+        opacity: 0.7;
+        color: fade(@black, 50%);
+        &:hover{
+            background-color: fade(@greyl, 50%);
+            border: 1px solid fade(@black, 20%);
+            cursor: default;
+        }
+    }
+}
+
+#wim-select(){
+    display: inline-block;
+    margin: 5px 0;
+    select{
+        background-color: fade(@greyl, 50%);
+        position: relative;
+        z-index: 10;
+        &:hover,
+        &:focus{
+            background-color: fade(@blue, 5%);
+        }
+        &:disabled{
+            opacity: 0.7;
+            color: fade(@black, 50%) !important;
+            &:hover{
+                background-color: fade(@greyl, 50%);
+                border: 1px solid fade(@black, 20%);
+                cursor: default;
+            }
+        }
+    }
+    &:after{
+        font-family: 'ionicons';
+        content: '\f123';
+        position: relative;
+        left: -30px;
+        top: 2px;
+        font-size: 12pt;
+        color: fade(@blue, 80%);
+    }
+}
+.select-wim{
+    #wim-select();
+}
+.select-wim-lg{
+    #wim-select();
+    font-size: 16pt;
+    select{
+        padding: 8px 45px 8px 15px;
+    }
+    &:after{
+        top: -1px;
+        left: -36px;
+    }
+}
+.select-wim-sm{
+    #wim-select();
+    font-size: 8pt;
+    select{
+        padding: 4px 26px 4px 5px;
+    }
+    &:after{
+        font-size: 10pt;
+        top: 2px;
+        left: -25px;
+    }
+}
+
+
+//
+// Misc inputs
+//
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 17px; height: 17px;
+  border: 1px solid fade(@black, 20%);
+  background-color: @greyl;
+  border-radius: 2px;
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\f3fd';
+  font-family: 'ionicons';
+  position: absolute;
+  top: -1px; left: 2px;
+  font-size: 32px;
+  line-height: 0.8;
+  color: @blue;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: @greyl;
+  opacity: 0.5;
+}
+[type="checkbox"]:disabled:checked + label:after {
+    color: fade(@black, 40%);
+}
+[type="checkbox"]:disabled + label {
+  color: fade(@black, 40%);
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted @blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
+}
+
+
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 17px; height: 17px;
+  border: 1px solid fade(@black, 20%);
+  background-color: @greyl;
+  border-radius: 15px;
+}
+/* checked mark aspect */
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+  content: '\f120';
+  font-family: 'ionicons';
+  position: absolute;
+  top: 5px; left: 2px;
+  font-size: 14.5px;
+  line-height: 0.8;
+  color: fade(@blue, 95%);
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: @greyl;
+  opacity: 0.5;
+}
+[type="radio"]:disabled:checked + label:after {
+    color: fade(@black, 40%);
+}
+[type="radio"]:disabled + label {
+    color: fade(@black, 40%);
+}
+/* accessibility */
+[type="radio"]:checked:focus + label:before,
+[type="radio"]:not(:checked):focus + label:before {
+  border: 1px dotted @blue;
+}

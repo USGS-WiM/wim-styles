@@ -1,0 +1,136 @@
+//out: ../css/typography.css, sourcemap: false, compress: true
+
+@import "variables.less";
+// typography.less
+*{
+    outline: none !important;
+    &:hover{
+        outline: none !important;
+    }
+}
+
+// Links
+a{
+    text-decoration: none !important;
+    box-sizing: border-box;
+    padding: 3px;
+    color: @blue;
+    font-weight: 600;
+    &:visited{
+        text-decoration: none !important;
+        color: #6083db;
+        border-bottom: 1px dotted @blued !important;
+    }
+    &:hover{
+        text-decoration: none !important;
+    }
+    &focus{
+        text-decoration: none !important;
+    }
+    &:active{
+        text-decoration: none !important;
+    }
+}
+
+
+// Headers
+#header(){
+    padding: 10px 0 5px 0;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-family: 'Merriweather' serif;
+    color: @blackl;
+}
+h1{
+    #header();
+    font-size: 2em;
+    font-weight: 600;
+}
+h2{
+    #header();
+    font-size: 1.5em;
+    font-weight: 600;
+}
+h3{
+    #header();
+    font-size: 1.17em;
+    font-weight: 600;
+}
+h4{
+    #header();
+    font-size: 1em;
+    font-weight: 500;
+}
+h5{
+    #header();
+    font-size: 1.5em;
+    font-family: @sans;
+    font-weight: 700;
+}
+h6{
+    #header();
+    font-size: 1.17em;
+    font-family: @sans;
+    font-weight: 700;
+}
+
+
+// Paragraph
+p{
+    font-family: @sans;
+    color: fade(@black, 80%);
+    box-sizing: border-box;
+    padding: 10px 0;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 12pt;
+    letter-spacing: 0.15px;
+    line-height: 1.65em;
+}
+.codebox{
+    margin: 15px 0;
+    label{
+        display: block;
+        width: 100%;
+        background-color: @greyl;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 5px 15px;
+        font-size: 12pt;
+        letter-spacing: 1.5px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border: 1px solid @greyd;
+        border-bottom: none;
+    }
+    pre{
+        margin: 0 auto;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: 1px solid @grey;
+        background-color: @white;
+        padding: 10px;
+    }
+}
+pre{
+    background-color: @greyl;
+    border-radius: 4px;;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 10px 0;
+}
+blockquote{
+    background-color: @greyl;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 25px 0;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: fade(@black, 80%);
+}
+code{
+    color: @blue;
+    margin: 15px 0;
+}
