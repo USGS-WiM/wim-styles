@@ -1,0 +1,21 @@
+{
+  "name": "wim-styles",
+  "version": "0.0.1",
+  "homepage": "https://github.com/USGS-WiM/wim-styles",
+  "authors": [
+  ],
+  "description": "Styling for WiM",
+  "main": [
+    "./css/base.css",
+    "./less/*"
+  ],
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
