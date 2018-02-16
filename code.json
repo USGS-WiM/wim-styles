@@ -1,0 +1,46 @@
+[
+  {
+    "name": "wim-styles",
+    "organization": "U.S. Geological Survey",
+    "description": "WiM stylesheets for developing WiM-ly",
+    "version": "v0.0.3",
+    "status": "Production"
+
+    "permissions": {
+      "usageType": "openSource",
+      "licenses": [
+        {
+          "name": "Public Domain",
+          "URL": "https://github.com/usgs/wim-styles/blob/master/LICENSE.md"
+        }
+      ]
+    },
+
+    "homepageURL": null,
+    "downloadURL": "https://github.com/USGS-WiM/wim-styles/archive/master.zip",
+    "disclaimerURL": "https://github.com/USGS-WiM/wim-styles/blob/master/DISCLAIMER.md",
+    "repositoryUrl": "https://github.com/USGS-WiM/wim-styles",
+    "vcs": "git",
+
+    "laborHours": null,
+
+    "tags": [
+      "wim",
+      "styles",
+      "stylesheet"
+    ],
+
+    "languages": [
+      "css"
+    ],
+
+    "contact": {
+      "name": "Blake Draper",
+      "email": "bdraper@usgs.gov"
+    },
+
+    "date": {
+      "metadataLastUpdated": "2018-02-16"
+    }
+  }
+]
