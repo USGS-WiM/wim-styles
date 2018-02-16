@@ -1,5 +1,6 @@
 
 
+![WiM](USGS_ID_black.png) ![WiM](wimlogo.png)
 
 # wim-styles
 
