@@ -1,16 +1,21 @@
-#**wim-styles**
+
+
+
+# wim-styles
+
+
 
 Styling for WiM applications
 
-####/core:  core styling, based on WiM Styleguide
+#### /core:  core styling, based on WiM Styleguide
 
-####/template:  styling for generator-wim generated mapping apps
+#### /template:  styling for generator-wim generated mapping apps
 
-##Core WiM styles
+## Core WiM styles
 
 ### Adding as managed bower package to a project
 
-##### Step 1.
+#####  Step 1.
 Add wim-styles to the dependencies list in the project's bower.json:
 ```
 "dependencies": {
@@ -18,7 +23,7 @@ Add wim-styles to the dependencies list in the project's bower.json:
   }
 ```
 
-#####Step 2.
+##### Step 2.
 Tell bower to get the package from github and place it in your bower_components folder
 ```bash
 bower install
@@ -29,13 +34,13 @@ bower install wim-styles
 ```
 to install only that package
 
-#####Step 3.
+##### Step 3.
 Add the stylesheet reference to the index.html:
 ```html
  <link rel="stylesheet" href="bower_components/wim-styles/core/css/wim.css">
 ```
 
-#####Step 4(optional).
+##### Step 4(optional).
 Specify version in your dependencies list.  Version is important for ensuring the app does not break. Below will specify v0.0.12:
 
 ```
@@ -47,9 +52,9 @@ Specify version in your dependencies list.  Version is important for ensuring th
 If no version is specified, bower will retrieve the latest release (which may not be the latest commit).
 
 
-###Updating core styles
+### Updating core styles
 
-####This is the workflow for updating the core styles, which would apply changes to all applications importing wim-styles via bower, per the version specified.
+#### This is the workflow for updating the core styles, which would apply changes to all applications importing wim-styles via bower, per the version specified.
 
 After making style changes to the less files, less must be compiled, and version must be bumped up.
 
@@ -74,7 +79,7 @@ lessc wim.less ../css/wim.css
 ------
 
 
-##Template styles
+## Template styles
 
 ### Adding as managed bower package to map application made with [generator-wim](https://github.com/USGS-WiM/generator-wim)
 
@@ -86,7 +91,7 @@ Add wim-styles to the dependencies list in the project's bower.json:
   }
 ```
 
-#####Step 2.
+##### Step 2.
 Tell bower to get the package from github and place it in your bower_components folder
 ```bash
 bower install
@@ -97,14 +102,14 @@ bower install wim-styles
 ```
 to install only that package
 
-#####Step 3.
+##### Step 3.
 Add the stylesheet reference to the index.html:
 ```html
  <link rel="stylesheet" href="bower_components/wim-styles/template/css/base.css">
 ```
 **Note:** Be sure to place base.css *after* main.css, as it overwrite some classes from main.
 
-#####Step 4(optional).
+##### Step 4(optional).
 Specify version in your dependencies list.  Version is important for ensuring the app does not break. Below will specify v0.0.12:
 
 ```
@@ -140,9 +145,9 @@ Other ways to specify version:
 ----------
 
 
-###Updating template styles
+### Updating template styles
 
-####This is the workflow for updating the  template styles, which would apply changes to all applications importing wim-styles via bower, per the version specified.
+#### This is the workflow for updating the  template styles, which would apply changes to all applications importing wim-styles via bower, per the version specified.
 
 After making style changes to the less files, less must be compiled, and version must be bumped up.
 
@@ -208,8 +213,6 @@ git push upstream master --tags
 ----------
 
 
-> Written with [StackEdit](https://stackedit.io/).
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to us. Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on adhering by the [USGS Code of Scientific Conduct](https://www2.usgs.gov/fsp/fsp_code_of_scientific_conduct.asp).
@@ -232,18 +235,13 @@ See also the list of [contributors](../../graphs/contributors) who participated 
 
 ## License
 
-This project is licensed under the Creative Commons CC0 1.0 Universal License - see the [LICENSE.md](LICENSE.md) file for details
+This project is in the Public Domain. See the [LICENSE.md](LICENSE.md) file for details
 
 ## Suggested Citation
 In the spirit of open source, please cite any re-use of the source code stored in this repository. Below is the suggested citation:
 
 `This project contains code produced by the Web Informatics and Mapping (WIM) team at the United States Geological Survey (USGS). As a work of the United States Government, this project is in the public domain within the United States. https://wim.usgs.gov`
 
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration Note 
 
 ## About WIM
 * This project authored by the [USGS WIM team](https://wim.usgs.gov)
